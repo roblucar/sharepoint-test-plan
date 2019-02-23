@@ -1,3 +1,3 @@
-# The SharePoint test plan
+# SharePoint crawler test plan
 
 This is a test plan that verifies a sharepoint crawler works as expected. 
