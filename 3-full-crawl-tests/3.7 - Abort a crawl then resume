@@ -1,0 +1,9 @@
+# Abort crawl then resume
+
+* Crawl a 1 million list item sharepoint site collection fully. Note how many documents you indexed at the end.
+* Clear the data source.
+* Crawl the sharepoint site collection fully again. Note how many documents you indexed at the end.
+  * Assert the number of documents is the same as first crawl.
+* Crawl the sharepoint site collection again but this time abort the crawl and resume 3 times throughout, then let it finish.
+  * Assert the number of documents is the same as first and second crawl.
+  * Assert resume doesn't take an absorbant amount of time to take place.
