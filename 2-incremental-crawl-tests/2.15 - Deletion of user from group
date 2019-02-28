@@ -1,0 +1,26 @@
+# 2.15 Deletion of user from AD group
+
+## summary
+
+Verify that users which are removed as members of a AD groups are reflected in the search collection.
+
+## steps 1
+
+* Create a new site s1 in a site collection sc1
+* Create AD group adg1
+* Add user u1 to adg1
+* Add AD group adg1 to a Sharepoint group in site s1
+* Crawl s1 
+
+## assertions 1
+
+* Verify that site s1 was crawled and indexed
+
+## steps 2
+
+* Remove u1 membership to adg1
+* Crawl s1
+
+## assertions2: 
+
+Verify that the permissions for user u1 is no longer found in the corresponding documents for site s1
