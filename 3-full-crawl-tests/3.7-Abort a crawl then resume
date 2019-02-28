@@ -1,9 +1,28 @@
-# Abort crawl then resume
+# 3.3 -  Abort crawl then resume
 
-* Crawl a 1 million list item sharepoint site collection fully. Note how many documents you indexed at the end.
-* Clear the data source.
-* Crawl the sharepoint site collection fully again. Note how many documents you indexed at the end.
-  * Assert the number of documents is the same as first crawl.
-* Crawl the sharepoint site collection again but this time abort the crawl and resume 3 times throughout, then let it finish.
-  * Assert the number of documents is the same as first and second crawl.
-  * Assert resume doesn't take an absorbant amount of time to take place.
+## Summary
+
+Verify that the number of document indexed in a aborted then resumed crawl  is the same as full crawl without interruption.
+
+## Steps 1
+
+ * Create a site collection sc1 with sub sites and lists which total roughly around 1 million list items 
+ * Crawl sc1
+  
+## Assertions 1
+
+ * Verify that the crawl completes successfully 
+ * Make note of the total number of documents index (this will be a different total than the total items in the site collection)
+
+## Steps 2
+
+ * Clear the data source
+ * Start crawl of sc1
+ * Perform next steps 3 times before all Sharepoint documents are indexed
+  * Abort running crawl
+  * Restart crawl 
+
+## Assertion 2
+
+ * Assert the number of documents indexed is the same as first full crawl run.
+ * Assert resume doesn't take an absorbant amount of time to take place.
